@@ -2,6 +2,7 @@ from crypt import methods
 from flask import Flask, request
 import pickle
 from sklearn.metrics.pairwise import cosine_similarity
+import cleanpost as cp
 
 app = Flask(__name__)
 with open('centroid.pickle', 'rb') as handle:
@@ -38,8 +39,11 @@ def getPattern(text):
 @app.route('/', methods=['POST'])
 def index():
     requst_data = request.get_json()
+    requst_data = cp.apply_cleaning(requst_data)
     print(requst_data)
     return '200'
     
 
 app.run(host='0.0.0.0', port=3000)
+
+# Scraping JSON.stringify(document.getElementsByClassName('s-prose js-post-body')[0].innerHTML).replace(/\s\s+/g, ' ') 
