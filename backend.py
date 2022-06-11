@@ -34,8 +34,12 @@ def getPattern(text):
             pattern = centroid
     return pattern
 
+# text -> clean -> title + body -> keywords of title & body -> get pattern
 @app.route('/', methods=['POST'])
 def index():
+    requst_data = request.get_json()
+    print(requst_data)
     return '200'
+    
 
-app.run(host='0.0.0.0', port=80)
+app.run(host='0.0.0.0', port=3000)
