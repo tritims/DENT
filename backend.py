@@ -39,7 +39,7 @@ def getPattern(text):
 @app.route('/', methods=['POST'])
 def index():
     requst_data = request.get_json()
-    requst_data = cp.apply_cleaning(requst_data)
+    requst_data = cp.apply_cleaning(requst_data.toast)
     print(requst_data)
     return '200'
     
