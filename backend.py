@@ -45,7 +45,7 @@ def index():
     body_kws = getKeywords(body)
     pattern, score = getPattern(title_kws + ' ' + body_kws)
     return jsonify({
-        "score": score,
+        "score": score.item(),
         "pattern": pattern
     })
     
