@@ -41,7 +41,9 @@ def getPattern(text):
 # text -> clean -> title + body -> keywords of title & body -> get pattern
 @app.route('/', methods=['POST'])
 def index():
+    print("inside post...")
     request_data = request.get_json()
+    print(request_data)
     title = request_data['title']
     body = cp.clean_body(request_data['body']) # body in HTML format
     title_kws = getKeywords(title)
