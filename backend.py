@@ -1,5 +1,5 @@
 from crypt import methods
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import pickle
 from sklearn.metrics.pairwise import cosine_similarity
 import cleanpost as cp
@@ -33,8 +33,7 @@ def getPattern(text):
         if t> max_score:
             max_score = t
             pattern = centroid
-    print(max_score)
-    return pattern
+    return pattern, max_score
 
 # text -> clean -> title + body -> keywords of title & body -> get pattern
 @app.route('/', methods=['POST'])
@@ -44,15 +43,15 @@ def index():
     body = cp.clean_body(request_data['body']) # body in HTML format
     title_kws = getKeywords(title)
     body_kws = getKeywords(body)
-    print(getPattern(title_kws + ' ' + body_kws))
-    # print(requst_data['toast'])
-    # requst_data['toast'] = " ".join(requst_data['toast'].split())
-
-    # print(cp.removecode(request_data['body']))
-    # print(requst_data)
-    return '200'
+    pattern, score = getPattern(title_kws + ' ' + body_kws)
+    return jsonify({
+        "score": score,
+        "pattern": pattern
+    })
     
 
 app.run(host='0.0.0.0', port=3000)
+
+# next steps -> write a frontend -> check tags -> extract title + body -> make JSON and REST call -> log the output
 
 # Scraping JSON.stringify(document.getElementsByClassName('s-prose js-post-body')[0].innerHTML).replace(/\s\s+/g, ' ') 
