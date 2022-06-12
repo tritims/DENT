@@ -34,4 +34,4 @@ def clean_body(data):
     removeTag(s, 'a')
     removeTag(s, 'code')
     body =  eval(s.get_text())
-    return remove_escape(cleanhtml(removecode(removeurls(body)))).trim()
+    return remove_escape(cleanhtml(removecode(removeurls(body)))).strip()
