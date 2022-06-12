@@ -3,8 +3,11 @@ from flask import Flask, request, jsonify
 import pickle
 from sklearn.metrics.pairwise import cosine_similarity
 import cleanpost as cp
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+CORS(app)
+
 with open('centroid.pickle', 'rb') as handle:
     centroids = pickle.load(handle)
 
