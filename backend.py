@@ -33,6 +33,7 @@ def getPattern(text):
         if t> max_score:
             max_score = t
             pattern = centroid
+    print(max_score)
     return pattern
 
 # text -> clean -> title + body -> keywords of title & body -> get pattern
