@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>eTagger: Watch Out for Energy Patterns! Towards Tagging Energy Sensitive GitHub Issues</title>
+    <title>DENT: Is the Question Energy Sensitive? Towards Tagging Stack Overflow Questions With Deep Learning Energy Patterns</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +32,7 @@
                     <h1 class="logo">
                         <a href="index.html">
 <!--                             <span aria-hidden="true" class="icon_documents_alt icon"></span> -->
-                            <span class="text-highlight"></span><span class="text-bold">eTagger</span>
+                            <span class="text-highlight"></span><span class="text-bold">DENT</span>
                         </a>
                     </h1>
                     
@@ -59,18 +59,20 @@
                 <div class="doc-body row">
                     <div class="doc-content col-md-9 col-12 order-1">
                         <div class="content-inner">
-                            <section id="download-section" class="doc-section">'
-                                <h1 class="section-title">eTagger: Watch Out for Energy Patterns! Towards Tagging Energy Sensitive GitHub Issues</h1>
+                            <section id="download-section" class="doc-section">
+                                <h1 class="section-title">DENT: Is the Question Energy Sensitive? Towards Tagging Stack Overflow Questions With Deep Learning Energy Patterns</h1>
                                 <br>
                                 <h3 class="block-title">Tool Description</h3>
                                 <div class="section-block">
                                     <p>
-                                    eTagger is a Chrome extension that labels energy sensitive issues from Android projects on GitHub with <a href="https://tqrg.github.io/energy-patterns/#/">energy patterns</a> associated with the issue. 
-                                    The goal of eTagger is to make both the developers and the maintainers of the project aware of the energy efficiency when they take up the issues raised in the project, 
-                                    thereby increasing their adoption and making the projects more energy efficient.
+                                        DENT <i>(Deep Learning Energy pattern Tagger)</i> is
+                                        a Chrome extension used to add "energy pattern tags" 
+                                        to the deep learning related questions from Stack Overflow.
+                                        DENT is aimed at increasing the awareness about the deep learning 
+                                        energy patterns among the developers and improving their adoption.
                                     </p>
 
-                                    <a href="https://github.com/tritims/eTagger/archive/main.zip" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download Tool Zip</a>
+                                    <a href="https://github.com/tritims/DENT/archive/main.zip" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download Tool Zip</a>
                                 </div>
                             </section><!--//doc-section-->
                             <section id="installation-section" class="doc-section">
@@ -84,7 +86,7 @@
                                     <div class="code-block">
                                         
                                         <p>Clone or download this github repository:</p>
-                                        <p><code>git clone https://github.com/tritims/eTagger.git</code></p>
+                                        <p><code>git clone https://github.com/tritims/DENT.git</code></p>
                                         <p>Navigate into the backend directory:</p>
                                         <p><code>cd backend</code></p>
                                         <p>Install the requirements:</p>
@@ -98,10 +100,13 @@
                                     </div><!--//code-block-->
                                     <h3 class="block-title" id="usage">Usage</h3>
                                     <div class="code-block">
-                                        <p>Navigate to an Android project repository on Github.</p>
-                                        <p>Ex: <a href="https://github.com/iNPUTmice/Conversations">iNPUTmice/Conversations</a></p>
-                                        <p>Navigate to the Issues tab to see the issues labeled with energy patterns.</p>
-                                        <img src="assets/images/demo/isssues_tab.png" alt="issues tab">
+                                        <p>Navigate to a Stack Overflow question page containig a question with one of the 
+                                            following deep learning related tags <i>(tensorflow, theano, keras
+                                                caffe, pytorch)</i>.</p>
+                                        <p>Ex: <a href="https://stackoverflow.com/questions/67452064/">https://stackoverflow.com/questions/67452064/</a></p>
+                                        <p>The energy pattern tag can be seen on the top-left of the question body 
+                                            above the <i>vote</i> button as shown in the figure below.</p>
+                                        <img src="assets/images/demo/DENT_UI.png" alt="DENT UI">
                                     </div>
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
@@ -110,13 +115,18 @@
                                 <div class="section-block">
                                     <ul>
                                         <li>
-                                            <strong>Generation of Labels</strong>
+                                            <strong>Classification methodology</strong>
                                             <p>
-                                                eTagger uses the cosine similarity metric of the issue text and the energy pattern 
-                                                description to find out the labels associated with the issue. For the sake of providing a 
-                                                better UX, the number of labels are capped at 3. 
+                                               DENT uses centroid based classification to classify a question into one of the 
+                                               enegry patterns. The input text is converted into sentence embeddings using pretrained 
+                                               sentence-BERT model. The cosine similarity of the embeddings with the centroid of every 
+                                               energy pattern is computed. The energy pattern that gives the maximum similarity score 
+                                               is assigned as the output label to the corresponding input document. To ensure that  
+                                               the classifier does not assign energy labels to the questions that are not related to 
+                                               energy, we have a cosine similarity threshold of 0.5. Below this score, no energy pattern 
+                                               is assigned to the input text. 
                                             </p>
-                                            <img class="img-fluid" src="assets/images/demo/eTagger_approach_2.png" alt="elegant icons" />
+                                            <img class="img-fluid" src="assets/images/demo/classification_2.png" alt="elegant icons" />
                                             <br>
                                         </li>
                                         <div style="height: 20px;"></div>
@@ -131,7 +141,7 @@
                                                 This list is used to generate the tag element for each of the labels. 
                                                 These tags areappended to the issues in the webpage
                                             </p>
-                                            <img class="img-fluid" src="assets/images/demo/eTagger_extension.png" alt="elegant icons" />
+                                            <img class="img-fluid" src="assets/images/demo/DENT_Extension.png" alt="elegant icons" />
                                             <br>
                                         </li>
                                     </ul>
@@ -139,37 +149,6 @@
                                 
                             </section>
 
-
-
-                            <section id="feature-section" class="doc-section">
-                                <h2 class="section-title">Screenshots</h2>
-                                <div class="section-block">
-
-                                    <ul style="list-style: none;">
-                                        <li>
-                                            <br>
-                                            <img class="img-fluid" src="assets/images/demo/Screenshot_1.png" alt="elegant icons" />
-                                            <br><br>
-                                        </li>
-                                        <li>
-                                            <br>
-                                            <img class="img-fluid" src="assets/images/demo/Screenshot_2.png" alt="elegant icons" />
-                                            <br><br>
-                                        </li>
-                                        <li>
-                                            <br>
-                                            <img class="img-fluid" src="assets/images/demo/Screenshot_3.png" alt="elegant icons" />
-                                            <br><br>
-                                        </li>
-                                        <li>
-                                            <br>
-                                            <img class="img-fluid" src="assets/images/demo/Screenshot_4.png" alt="elegant icons" />
-                                            <br><br>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                            </section>
 
                             <section id="uses-section" class="doc-section">
                                 <h2 class="section-title">Goals</h2>
