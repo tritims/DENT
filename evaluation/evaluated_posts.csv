@@ -1,0 +1,103 @@
+Id,Title,pattern,prediction
+50690891,why this simple model take large memory usage in tensorflow?,memory leaks,memory leaks
+53017722,Input image of a fully quantized tensorflow lite model,quantization,quantization
+59265818,Memory leak in Pytorch: object detection,memory leaks,memory leaks
+62402825,"How do I read data from large .h5 dataset in batches, preprocess with ImageDataGenerator & model.fit, all without running out of memory?",memory leaks,None
+60056812,Change custom loss parameter and NN parameter with respect to epoch,distillation,distillation
+48677128,What is the right way to preprocess images in Keras while fine-tuning pre-trained models,pretrained networks,pretrained networks
+56774466,How to sum up a value on specific indices in tensorflow,tensor operations,tensor operations
+56779949,Unable to go from tf.keras model -> quantized frozen graph -> .tflite with TOCO,quantization,None
+44327803,Memory leak with TensorFlow,memory leaks,memory leaks
+61858079,"""IndexError: child index out of range ""- converting xml to csv",None,None
+51998728,Tensorflow: Masking an array based on duplicated elements of another array,tensor operations,tensor operations
+61550788,Is there a way to freeze specific layers in a KerasLayer?,pretrained networks,None
+47665314,how can we get benefit from sharding the data to speed the training time?,efficient read write,None
+54477157,Usage of k.clear_session() and tf.reset_default_graph() to clear graph between subsequent models,memory leaks,memory leaks
+55567838,how to avoid split and sum of pieces in pytorch or numpy,tensor operations,tensor operations
+37427786,How do you add new categories and training to a pretrained Inception v3 model in TensorFlow?,pretrained networks,pretrained networks
+63302446,Colab+TPU not supporting TF 2.3.0 tf.keras.layers.experimental.preprocessing,pretrained networks,None
+50895128,tensorflow: assigning weights after finalizing graph,memory leaks,tensor operations
+49271114,Define instance key (index number) for Cloud machine learning prediction,None,None
+58711222,How to set prunable layers for tfmot.sparsity.keras.prune_low_magnitude?,pruning,pruning
+35644264,How to read data into Tensorflow?,efficient read write,efficient read write
+62402825,"How do I read data from large .h5 dataset in batches, preprocess with ImageDataGenerator & model.fit, all without running out of memory?",memory leaks,None
+42650003,"Training a dense layer from bottleneck features vs. freezing all layers but the last - should be the same, but they behave differently",pretrained networks,checkpoint
+68928299,multiclass sequence classifiaction with fastai and huggingface,distillation,None
+61858079,"""IndexError: child index out of range ""- converting xml to csv",None,None
+47393991,Initializing variables multiple times in TensorFlow leaks memory,memory leaks,memory leaks
+66268742,How do you prevent memory usage to explode when using Keras in a loop,memory leaks,None
+43834533,How to quantize the values of tf.Variables in Tensorflow,quantization,quantization
+66880262,python multiprocessing start and close processes independently,memory leaks,memory leaks
+65729423,Python Error: the following arguments are required: experimentname,None,None
+49942110,tf.reset_default_graph memory leak,memory leaks,memory leaks
+61715631,memory leak in keras while training a GAN,memory leaks,memory leaks
+62558666,convert .pb model into quantized tflite model,quantization,quantization
+49081129,"Keras multi_gpu_model error: ""swig/python detected a memory leak of type 'int64_t *', no destructor found""",memory leaks,memory leaks
+60655246,How to produce all the combinations of the elements of two or more tensors?,tensor operations,tensor operations
+40642735,User-defined joint prior distribution in Pymc3 & Theano exception,None,None
+41992132,"Tensorflow error when restoring trained model for eval, invalid shapes issue?",checkpoint,checkpoint
+52099863,How to read (decode) tfrecords with tf.data API,efficient read write,efficient read write
+50773509,Understanding the Input Parameters in RNN,None,None
+57631313,I use TFLiteConvert post_training_quantize=True but my model is still too big for being hosted in Firebase ML Kit's Custom servers,quantization,None
+57531365,Tensorflow Keras RuntimeError: Graph is finalized and cannot be modified. [Minimal working example provided],pretrained networks,pretrained networks
+65902185,TFLiteConverter representative_dataset from keras.preprocessing.image_dataset_from_directory dataset,quantization,pretrained networks
+61402903,Unable to create group (name already exists),distillation,pretrained networks
+66090385,Why parameters in prunning increases in tensorflow's tfmot,pruning,memory leaks
+36645799,TensorFlow's target pruning can't find nodes,pruning,tensor operations
+42788342,How do I add a top dense layer to ResNet50 in Keras?,pretrained networks,pretrained networks
+49081129,"Keras multi_gpu_model error: ""swig/python detected a memory leak of type 'int64_t *', no destructor found""",memory leaks,memory leaks
+61772307,TensorFlow: Efficiently read (and shuffle) samples from large files,efficient read write,None
+57531365,Tensorflow Keras RuntimeError: Graph is finalized and cannot be modified. [Minimal working example provided],pretrained networks,pretrained networks
+52700621,Tensorflow server: I don't want to initialize global variables for every session,memory leaks,efficient read write
+64519523,OOM when allocating tensor with shape - how to get more GPU memory,memory leaks,memory leaks
+50215301,Tensorflow: how to use pretrained weights in new graph?,pretrained networks,tensor operations
+33699798,Can Theano use the GPU on a Linux installed with Wubi?,None,None
+68146147,How to add an auxiliary head to an intermediary layer of a pretrained keras model?,None,None
+66090385,Why parameters in prunning increases in tensorflow's tfmot,pruning,memory leaks
+54915054,Feed Variables in Tensorflow Efficiently,efficient read write,tensor operations
+60142937,HuggingFace Transformers For Text Generation with CTRL with Google Colab's free GPU,None,None
+61421983,How to use trained siamese network to predict labels for large test set with 100+ classes?,memory leaks,None
+58541463,How do you efficiently sum the occurences of a value in one array at positions in another array,tensor operations,None
+47286441,Only 'Import keras' takes 10GB in GPU,memory leaks,memory leaks
+46230501,Memory efficient way of converting raw image data into features for a neural net,memory leaks,None
+46704352,Porting PyTorch code from CPU to GPU,None,None
+44311820,Tensorflow tanh with quantized values,quantization,quantization
+48216772,Is tf.recorder way of reading data more efficient than feed to placeholder?,efficient read write,efficient read write
+41745496,loops without unrolling in tensorflow,tensor operations,tensor operations
+56585023,ValueError in the first epoch ending of tensorflow training,None,None
+60817825,Generating data for image processing,pretrained networks,None
+39878628,memory leak in batch matrix factorization with tensorflow,memory leaks,memory leaks
+50331201,Memory Leak Keras TensorFlow1.8.0,memory leaks,memory leaks
+43300000,TensorFlow: Quantize model using python before save,quantization,quantization
+50641981,Tensorflow: generate samples from a Multinomial distribution [Space efficient way?],tensor operations,tensor operations
+47286441,Only 'Import keras' takes 10GB in GPU,memory leaks,memory leaks
+63924862,Is it possible to run ssd_mobilenet_v1_fpn on Android for inference?,quantization,None
+66729085,How to feed a Conv2d layer output as input for a Keras model?,pretrained networks,pretrained networks
+49061416,Is tensorflow lite model already quantized?,quantization,quantization
+50686873,Most efficient way to average bunches of x embeddings from a Tensorflow variable that contains y total embeddings,tensor operations,tensor operations
+67243218,Accessing PyTorch modules - ResNet18,pruning,pretrained networks
+46539404,Tensorflow memory leak in every iteration,memory leaks,memory leaks
+41465681,Use V2 checkpoint for TFLearn (TensorFlow) r0.12.1,checkpoint,None
+45873438,All weights are all zero (not changing) in MNIST sample,None,None
+54449159,Keras using all GPU memory straight away,memory leaks,memory leaks
+53127232,Most space/memory efficient way to save Tensorflow model for prediction only?,checkpoint,efficient read write
+53104887,Access internal tensors and add a new node to a tflite model?,quantization,tensor operations
+51724450,Finding centre of mass of tensor (tensorflow),tensor operations,tensor operations
+63201036,Add additional layers to the Huggingface transformers,distillation,pretrained networks
+56156646,Keras + Tensorflow Model Optimization: TypeError: clone_model() got an unexpected keyword argument 'clone_function',pruning,pretrained networks
+39757985,"Why are there two additional variables, in the checkpoint, for each layer?",checkpoint,checkpoint
+43533264,How to read tensorflow memory mapped graph file in android?,memory leaks,memory leaks
+67821830,Using 3-channel (RGB) PyTorch model for classification 4-channel (RGBY) images,pretrained networks,pretrained networks
+67056438,Computing gradients only for the front-end network in Pytorch,memory leaks,memory leaks
+57483565,Regression with convnet on image using keras - accuracy can't increase more than 40%,None,checkpoint
+60166831,Is it possible to use a StackRegressor on pretrained models?,pretrained networks,pretrained networks
+47482135,Tensorflow memory leak in tf.decode_csv function,memory leaks,memory leaks
+66818548,"Trouble implementing ""concurrent"" softmax function from paper (PyTorch)",None,None
+45279799,How to restore tensorflow model without index file and meta file?,pretrained networks,checkpoint
+62490121,how to convert Lenet model h5 to .tflite,quantization,quantization
+41621071,Restore subset of variables in Tensorflow,checkpoint,checkpoint
+50806953,Unable to compile keras model for multi-class prediction,pretrained networks,pretrained networks
+48911249,How to read a utf-8 encoded binary string in tensorflow?,efficient read write,tensor operations
+54781966,Does pytorch do eager pruning of its computational graph?,pruning,pruning
+45725053,More efficient way of loading images for detection,efficient read write,pretrained networks
+61018287,I import repo from Github to Colab When I run it there is no response,None,None
