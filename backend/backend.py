@@ -8,7 +8,7 @@ import numpy as np
 
 app = Flask(__name__)
 CORS(app)
-MODE = 'DEV'
+MODE = 'PROD'
 
 if MODE != 'DEV':
     with open('centroid.pickle', 'rb') as handle:
